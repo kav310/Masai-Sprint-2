@@ -1,2 +1,2 @@
 # Masai-Sprint-2
-Sudoku-Game
+2048-Game
