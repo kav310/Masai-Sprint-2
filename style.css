@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+   background-color: #20053b;
+}
+
+h1,h2{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-family: 'News Cycle', sans-serif;
+}
+
+#control{
+    width: 200px;
+    margin: 20px auto;
+}
+#control h2{
+    font-family: 'Permanent Marker', cursive; 
+    color:white;  
+}
+#control button{
+    padding: 10px;
+}
+#container{
+    width: 500px;
+    height: 500px;
+    background-image: linear-gradient(-225deg, #7DE2FC 0%, #B9B6E5 100%);
+    border-radius: 16px 16px 16px 16px;
+    box-shadow: 0px 14px 30px -9px rgba(0,0,0,0.74);
+    margin: 20px auto;
+    overflow:hidden;
+    z-index:5;
+}
+.display{
+    width: inherit;
+    height: inherit;
+}
+#elements{
+    display: none;
+    text-align: center;
+}
+#elements h1{
+    margin-top: 70px;
+    text-align: center;
+}
+#elements h1 .char1{
+    color:rgb(157, 95, 214);
+}
+#elements h1 .char2{
+    color:rgb(218, 168, 218);
+}
+#elements #start{
+    background-image: linear-gradient(60deg, #abecd6 0%, #fbed96 100%);
+    color:black;
+    border-radius: 10px;
+    margin-top:140px;
+    padding:10px;
+    font-size:50px;
+}
+#pause{
+    display:none;
+    position:absolute;
+    background: rgba(50,50,50,0.4);
+    z-index:1;
+    border-radius: 16px 16px 16px 16px;
+    text-align:center;
+}
+#pause h1{
+    margin-top:150px;
+    color:orange;
+}
+#pause button{
+    display:block;
+    background: linear-gradient(to right, rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%);
+    border-radius: 10px;
+    padding:10px;
+    color:black;
+    margin:20px auto;
+    font-size:30px;
+}
+#end{
+    display:none;
+}
+#game{
+   padding:10px 10px; 
+   position:relative;
+   display:none;
+}
+#game #update{
+    padding:5px 10px;
+    background:gray; 
+    margin:0 auto;
+    width:200px;
+}
+#game #info #pausebtn {
+    float:right;
+}
+#game #gamearea{
+    position:absolute;
+    bottom:50px;
+    left:50px;
+    width:300px;
+    height:300px;
+    background-color: #CDDCDC;
+ background-image: radial-gradient(at 50% 100%, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%), linear-gradient(to bottom, rgba(255,255,255,0.25) 0%, rgba(0,0,0,0.25) 100%);
+ background-blend-mode: screen, overlay;
+}
+#game #gamearea .tiles{
+    width:75px;
+    height:75px;
+    background: transparent;
+    border: 1px solid #d6ced6;
+    display:inline-block;
+    margin-right:-4px;
+    margin-bottom:-4px;
+    overflow:hidden;
+    font-size:30px;
+    line-height:2.2;
+    text-align:center;
+    font-family: 'Sniglet', cursive;
+    color:white;
+} 
