@@ -25,3 +25,10 @@ function reset(){
     pause.style.display="none";
     renderDom();
 }
+
+function start(){
+    var elements = document.getElementById('elements');
+    var game = document.getElementById('game');
+    elements.style.display="none";
+    game.style.display="block";
+}
