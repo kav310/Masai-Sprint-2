@@ -38,9 +38,8 @@ function right(){
             }
         }
     }
-    if(can){av();}
+    
 }
-
 function left(){
     var state=false;
     var condition = false;
@@ -69,8 +68,8 @@ function left(){
         }
         
     }
-    if(state){av();}
 }
+
 
 function renderDom(){
     var elements = document.getElementById('elements');
