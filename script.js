@@ -70,6 +70,36 @@ function left(){
     }
 }
 
+function down(){
+    var state=false;
+    var condition = false;
+    var k;
+    var score = document.getElementById("score");
+    for(var i=11; i>7; i-=1){
+        condition = false;
+        for(var j=i; j>=0; j=j-4){
+            if(arr[j].innerHTML!==""){
+                k=j;
+                while(k<12 && 
+                (parseInt(arr[k+4].innerHTML)===parseInt(arr[k].innerHTML) 
+                || arr[k+4].innerHTML==="")){
+                    if( parseInt(arr[k+4].innerHTML)===parseInt(arr[k].innerHTML) && condition===false ){
+                        arr[k+4].innerHTML=parseInt(arr[k+4].innerHTML)+parseInt(arr[k].innerHTML);
+                        arr[k].innerHTML=""; state=true;condition=true;
+                        score.innerHTML=parseInt(arr[k+4].innerHTML)+parseInt(score.innerHTML);
+                    }
+                    else if( parseInt(arr[k+4].innerHTML)===parseInt(arr[k].innerHTML) && condition===true ){condition===false;}
+                    else if(arr[k+4].innerHTML===""){arr[k+4].innerHTML=parseInt(arr[k].innerHTML);
+                        arr[k].innerHTML=""; state=true;
+                    }
+                    k+=4;
+                }
+            }
+        }
+    }
+}
+
+
 
 function renderDom(){
     var elements = document.getElementById('elements');
