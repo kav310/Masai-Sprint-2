@@ -19,3 +19,9 @@ function pause(){
     var control = document.getElementById('control');
     control.style.display="none";
 }
+
+function reset(){
+    var pause = document.getElementById('pause');
+    pause.style.display="none";
+    renderDom();
+}
