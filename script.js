@@ -39,3 +39,10 @@ function resume(){
     var control = document.getElementById('control');
     control.style.display="block";
 }
+
+window.addEventListener("keydown", function(keys){
+    if(keys.code=="ArrowLeft"){left();}
+    else if(keys.code=="ArrowRight"){right();}
+    else if(keys.code=="ArrowUp"){up();}
+    else if(keys.code=="ArrowDown"){down();}
+})

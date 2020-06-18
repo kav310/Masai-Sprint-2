@@ -12,9 +12,11 @@ h1,h2{
     text-align: center;
     margin-top: 10px;
     margin-bottom: 20px;
-    font-family: 'News Cycle', sans-serif;
 }
-
+.font-style{
+    font-family: 'Londrina Outline', cursive;
+    font-size: 100px;
+}
 #control{
     width: 200px;
     margin: 20px auto;
@@ -30,7 +32,7 @@ h1,h2{
     width: 500px;
     height: 500px;
     background-image: linear-gradient(-225deg, #7DE2FC 0%, #B9B6E5 100%);
-    border-radius: 16px 16px 16px 16px;
+    border-radius: 16px;
     box-shadow: 0px 14px 30px -9px rgba(0,0,0,0.74);
     margin: 20px auto;
     overflow:hidden;
@@ -52,7 +54,10 @@ h1,h2{
     color:rgb(157, 95, 214);
 }
 #elements h1 .char2{
-    color:rgb(218, 168, 218);
+    color:rgb(221, 131, 221);
+}
+#elements h1 .char3{
+    color: burlywood;
 }
 #elements #start{
     background-image: linear-gradient(60deg, #abecd6 0%, #fbed96 100%);
@@ -67,7 +72,7 @@ h1,h2{
     position:absolute;
     background: rgba(50,50,50,0.4);
     z-index:1;
-    border-radius: 16px 16px 16px 16px;
+    border-radius: 16px;
     text-align:center;
 }
 #pause h1{
@@ -92,29 +97,31 @@ h1,h2{
    display:none;
 }
 #game #update{
-    padding:5px 10px;
-    background:gray; 
+    padding:20px 15px;
+    background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
     margin:0 auto;
     width:200px;
 }
-#game #info #pausebtn {
+#game #update #pausebtn {
     float:right;
+    background-color:black;
+    border:black;
+    color: white;
+    padding: 3px;
 }
 #game #gamearea{
     position:absolute;
     bottom:50px;
-    left:50px;
+    left:100px;
     width:300px;
     height:300px;
-    background-color: #CDDCDC;
- background-image: radial-gradient(at 50% 100%, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%), linear-gradient(to bottom, rgba(255,255,255,0.25) 0%, rgba(0,0,0,0.25) 100%);
- background-blend-mode: screen, overlay;
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
 #game #gamearea .tiles{
     width:75px;
     height:75px;
     background: transparent;
-    border: 1px solid #d6ced6;
+    border: 1px solid black;
     display:inline-block;
     margin-right:-4px;
     margin-bottom:-4px;
@@ -123,5 +130,22 @@ h1,h2{
     line-height:2.2;
     text-align:center;
     font-family: 'Sniglet', cursive;
-    color:white;
+    color:black;
 } 
+
+.guide p {
+    text-align: center;
+    color: white;
+}
+.h2{
+    color: white;
+}
+.arrow{
+  text-align: center;
+  color: whitesmoke;
+  font-size: xx-large;
+}
+hr{
+    width: 500px;
+    margin: 10px auto;
+}
