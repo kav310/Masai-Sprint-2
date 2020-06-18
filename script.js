@@ -1,5 +1,18 @@
 window.onload = renderDom();
 
+var arr = document.getElementsByClassName('tiles')
+
+function generatorRandom(){
+  var flag=false;
+    while(flag===false){
+        var num = Math.floor(Math.random()*16);
+        if(arr[num].innerHTML===""){
+            arr[num].innerHTML=2;
+            flag=true;
+        }
+    }
+}
+
 function renderDom(){
     var elements = document.getElementById('elements');
     elements.style.display="block";
@@ -31,6 +44,8 @@ function start(){
     var game = document.getElementById('game');
     elements.style.display="none";
     game.style.display="block";
+   generatorRandom();
+   generatorRandom();
 }
 
 function resume(){
