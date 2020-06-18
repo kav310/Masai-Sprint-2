@@ -32,3 +32,10 @@ function start(){
     elements.style.display="none";
     game.style.display="block";
 }
+
+function resume(){
+    var pause = document.getElementById('pause');
+    pause.style.display="none";
+    var control = document.getElementById('control');
+    control.style.display="block";
+}
