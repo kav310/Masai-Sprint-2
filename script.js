@@ -13,6 +13,65 @@ function generatorRandom(){
     }
 }
 
+function right(){
+    var state=false;
+    var condition=false;
+    var k;
+    var score = document.getElementById('score');
+    for(var i=14; i>0; i-=4){
+        condition=false;
+        for(var j=1; j>=i-2; j--){
+            if(arr[j].innerHTML!==""){
+                k=j;
+                while(k<(i+1)&&  (parseInt(arr[k+1].innerHTML)===parseInt(arr[k].innerHTML) || arr[k+1].innerHTML==="") ){
+                    if( parseInt(arr[k+1].innerHTML)===parseInt(arr[k].innerHTML) && condition==false ){
+                        arr[k+1].innerHTML=parseInt(arr[k+1].innerHTML)+parseInt(arr[k].innerHTML);
+                        score.innerHTML=parseInt(arr[k+1].innerHTML)+parseInt(score.innerHTML);
+                        arr[k].innerHTML=""; state=true;conditiontrue;
+                    }
+                    else if( parseInt(arr[k+1].innerHTML)===parseInt(arr[k].innerHTML) && condition==true ){condition==false;}
+                    else if(arr[k+1].innerHTML===""){arr[k+1].innerHTML=parseInt(arr[k].innerHTML);
+                        arr[k].innerHTML=""; state=true;
+                    }
+                    k+=1;
+                }
+            }
+        }
+    }
+    if(can){av();}
+}
+
+function left(){
+    var state=false;
+    var condition = false;
+    var k;
+    var score = document.getElementById("score");
+    for(var i=13; i>0; i-=4){
+        condition = false;
+        for(var j=i; j<=i+2; j++){
+            if(arr[j].innerHTML!==""){
+                k=j;
+                while(k>(i-(i%4)) && 
+                (parseInt(arr[k-1].innerHTML)===parseInt(arr[k].innerHTML) 
+                || arr[k-1].innerHTML==="")){
+                    if( parseInt(arr[k-1].innerHTML)===parseInt(arr[k].innerHTML) && condition===false ){
+                        arr[k-1].innerHTML=parseInt(arr[k-1].innerHTML)+parseInt(arr[k].innerHTML);
+                        arr[k].innerHTML=""; state=true;condition=true;
+                        score.innerHTML=parseInt(arr[k-1].innerHTML)+parseInt(score.innerHTML);
+                    }
+                    else if( parseInt(arr[k-1].innerHTML)===parseInt(arr[k].innerHTML) && condition===true ){condition===false ;}
+                    else if(arr[k-1].innerHTML===""){arr[k-1].innerHTML=parseInt(arr[k].innerHTML);
+                        arr[k].innerHTML=""; state=true;
+                    }
+                    k-=1;
+                }
+            }
+        }
+        
+    }
+    if(state){av();}
+}
+
 function renderDom(){
     var elements = document.getElementById('elements');
     elements.style.display="block";
